@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="styles.css">-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Tarot Reading</title>
+</head>
+<body>
+    <header>
+        <h1>Tarot Reading</h1>
+    </header>
+    <main>
+		<div class="card-stack">
+			<!-- Display a stackoftarot cards -->
+			<div class="card-order" id="01" style="left: 10px; top: 10px; z-index: 100;">
+				<div class="card" style="left: 5px; top: 5px; z-index: 100;" id="TheFool">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="02" style="left: 8px; top: 8px; z-index: 100;">
+				<div class="card" style="left: 4px; top: 4px; z-index: 100;" id="TheMagician">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="03" style="left: 6px; top: 6px; z-index: 100;">
+				<div class="card" style="left: 3px; top: 3px; z-index: 100;" id="TheHighPriestess">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="04" style="left: 4px; top: 4px; z-index: 100;">
+				<div class="card" style="left: 2px; top: 2px; z-index: 100;" id="TheEmpress">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="05" style="left: 2px; top: 2px; z-index: 100;">
+				<div class="card" style="left: 1px; top: 1px; z-index: 100;" id="TheEmperor">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="06">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheHierophant">
+					<div class="card-back"></div>
+				</div>
+			</div>	
+			<div class="card-order" id="07">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheLovers">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="08">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheChariot">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="09">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="Strength">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="10">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheHermit">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="11">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="WheelofFortune">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="12">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="Justice">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="13">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheHangedMan">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="14">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="Death">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="15">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="Temperance">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="16">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheDevil">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="17">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheTower">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="18">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheStar">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="19">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheMoon">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="20">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheSun">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="21">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="Judgment">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="22">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TheWorld">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="23">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="AceofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="24">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TwoofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="25">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="ThreeofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="26">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="FourofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="27">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="FiveofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="28">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="SixofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="29">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="SevenofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="30">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="EightofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="31">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="NineofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="32">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TenofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="33">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="PageofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="34">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="KnightofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="35">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="QueenofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="36">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="KingofPentacles">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="37">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="AceofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="38">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TwoofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="39">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="ThreeofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="40">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="FourofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="41">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="FiveofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="42">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="SixofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="43">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="SevenofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="44">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="EightofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="45">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="NineofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="46">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TenofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="47">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="PageofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="48">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="KnightofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="49">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="QueenofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="50">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="KingofSwords">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="51">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="AceofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="52">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TwoofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="53">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="ThreeofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="54">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="FourofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="55">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="FiveofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="56">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="SixofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="57">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="SevenofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="58">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="EightofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="59">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="NineofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="60">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TenofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="61">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="PageofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="62">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="KnightofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="63">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="QueenofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="64">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="KingofCups">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="65">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="AceofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="66">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TwoofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="67">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="ThreeofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="68">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="FourofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="69">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="FiveofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="70">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="SixofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="71">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="SevenofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="72">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="EightofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="73">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="NineofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="74">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="TenofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="75">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="PageofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="76">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="KnightofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="78">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="KingofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+			<div class="card-order" id="77">
+				<div class="card" style="left: 0px; top: 0px; z-index: 100;" id="QueenofWands">
+					<div class="card-back"></div>
+				</div>
+			</div>
+
+		</div><!-- end card-stack --><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div class="headings"><h2>	
+			<div class="card-name" id="cardName"></div></h2>
+		</div>
+	    <div class="card-meaning" id="cardMeaning">
+        <!-- Card meaning will be displayed here -->
+		</div><br>
+        <div class="question">
+            <label for="question">Enter your question:</label>
+            <input type="text" id="question" placeholder="Ask your question...">
+            <button id="shuffle">Shuffle</button>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Tarot Reading App</p>
+    </footer>
+    
+	<!--script src="script.js"></script-->
+	
+	<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+	
+	<script>
+		let card_meanings = {{ card_meanings | tojson | safe }};
+		let card_mappings = {{ card_mappings | tojson | safe }};
+	</script>
+
+</body>
+</html>
