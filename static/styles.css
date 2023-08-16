@@ -1,0 +1,304 @@
+/* Reset some default styling */
+body, html {
+    margin: 25px;
+    padding: 55px;
+}
+
+.card-back {
+
+    width: 82px; /* Adjust Thedimensions as needed */
+    height: 142px;
+	background-color: null;
+    background-image: url("assets/cardBack1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*margin-top: -35px;  Create a slight overlap effect */
+    /*transform: rotate(-3deg); /* Rotate each card slightly */
+    transform-origin: top center; 
+	transition: trasnform 0.3s ease-in-out;/* Rotate each card slightly */
+    z-index: 100; /* Ensure cards stack on topofeach other */
+	background-size: contain; /* Ensure the image fits within the card */
+    background-repeat: no-repeat;
+    background-position: center;
+	opacity: 1; 
+	pointer-events: none;
+}
+.card-order {
+    position: absolute;
+    z-index: 0;
+    transition: transform 0.3s ease-in-out, z-index 0.3s;	
+	
+}
+.card-stack {
+	position: relative;
+
+	/*
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+	margin-right: -70px;
+	background-size: contain;*/
+}
+.card {
+	position: absolute;
+    width: 82px; /* Adjust Thedimensions as needed */
+    height: 142px;
+    background-color: null;
+    /*border: 1px solid #333; 
+    margin-top: -35px; /* Create a slight overlap effect /
+	margin-left: 20px;*/
+    transform-origin: top center; 
+	transition: trasnform 0.3s ease-in-out;/* Rotate each card slightly */
+    z-index: 100; /* Ensure cards stack on topofeach other */
+	background-size: contain; /* Ensure the image fits within the card */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*.card:not(:first-child) {
+    transform: translateX(1%) rotate(-1deg); /* Adjust rotation and translation as needed 
+}*/
+
+.card-meaning {
+	padding: 5px;
+	
+	
+}
+
+#TheFool {
+    background-image: url("assets/TheFool.jpg");
+}
+#TheMagician {
+    background-image: url("assets/TheMagician.jpg");
+}
+#TheHighPriestess {
+    background-image: url("assets/TheHighPriestess.jpg");
+}
+#TheEmpress {
+    background-image: url("assets/TheEmpress.jpg");
+}
+#TheEmperor {
+    background-image: url("assets/TheEmperor.jpg");
+}
+#TheHierophant {
+    background-image: url("assets/TheHierophant.jpg");
+}
+#TheLovers {
+    background-image: url("assets/TheLovers.jpg");
+}
+#TheChariot {
+    background-image: url("assets/TheChariot.jpg");
+}
+#Strength {
+    background-image: url("assets/Strength.jpg");
+}
+#TheHermit {
+    background-image: url("assets/TheHermit.jpg");
+}
+#WheelofFortune {
+    background-image: url("assets/WheelofFortune.jpg");
+}
+#Justice {
+    background-image: url("assets/Justice.jpg");
+}
+#TheHangedMan {
+    background-image: url("assets/TheHangedMan.jpg");
+}
+#Death {
+    background-image: url("assets/Death.jpg");
+}
+#Temperance {
+    background-image: url("assets/Temperance.jpg");
+}
+#TheDevil {
+    background-image: url("assets/TheDevil.jpg");
+}
+#TheTower {
+    background-image: url("assets/TheTower.jpg");
+}
+#TheStar {
+    background-image: url("assets/TheStar.jpg");
+}
+#TheMoon {
+    background-image: url("assets/TheMoon.jpg");
+}
+#TheSun {
+    background-image: url("assets/TheSun.jpg");
+}
+#Judgment {
+    background-image: url("assets/Judgment.jpg");
+}
+#TheWorld {
+    background-image: url("assets/TheWorld.jpg");
+}
+#AceofPentacles {
+    background-image: url("assets/AceofPentacles.jpg");
+}
+#TwoofPentacles {
+    background-image: url("assets/TwoofPentacles.jpg");
+}
+#ThreeofPentacles {
+    background-image: url("assets/ThreeofPentacles.jpg");
+}
+#FourofPentacles {
+    background-image: url("assets/FourofPentacles.jpg");
+}
+#FiveofPentacles {
+    background-image: url("assets/FiveofPentacles.jpg");
+}
+#SixofPentacles {
+    background-image: url("assets/SixofPentacles.jpg");
+}
+#SevenofPentacles {
+    background-image: url("assets/SevenofPentacles.jpg");
+}
+#EightofPentacles {
+    background-image: url("assets/EightofPentacles.jpg");
+}
+#NineofPentacles {
+    background-image: url("assets/NineofPentacles.jpg");
+}
+#TenofPentacles {
+    background-image: url("assets/TenofPentacles.jpg");
+}
+#PageofPentacles {
+    background-image: url("assets/PageofPentacles.jpg");
+}
+#KnightofPentacles {
+    background-image: url("assets/KnightofPentacles.jpg");
+}
+#QueenofPentacles {
+    background-image: url("assets/QueenofPentacles.jpg");
+}
+#KingofPentacles {
+    background-image: url("assets/KingofPentacles.jpg");
+}
+#AceofSwords {
+    background-image: url("assets/AceofSwords.jpg");
+}
+#TwoofSwords {
+    background-image: url("assets/TwoofSwords.jpg");
+}
+#ThreeofSwords {
+    background-image: url("assets/ThreeofSwords.jpg");
+}
+#FourofSwords {
+    background-image: url("assets/FourofSwords.jpg");
+}
+#FiveofSwords {
+    background-image: url("assets/FiveofSwords.jpg");
+}
+#SixofSwords {
+    background-image: url("assets/SixofSwords.jpg");
+}
+#SevenofSwords {
+    background-image: url("assets/SevenofSwords.jpg");
+}
+#EightofSwords {
+    background-image: url("assets/EightofSwords.jpg");
+}
+#NineofSwords {
+    background-image: url("assets/NineofSwords.jpg");
+}
+#TenofSwords {
+    background-image: url("assets/TenofSwords.jpg");
+}
+#PageofSwords {
+    background-image: url("assets/PageofSwords.jpg");
+}
+#KnightofSwords {
+    background-image: url("assets/KnightofSwords.jpg");
+}
+#QueenofSwords {
+    background-image: url("assets/QueenofSwords.jpg");
+}
+#KingofSwords {
+    background-image: url("assets/KingofSwords.jpg");
+}
+#AceofCups {
+    background-image: url("assets/AceofCups.jpg");
+}
+#TwoofCups {
+    background-image: url("assets/TwoofCups.jpg");
+}
+#ThreeofCups {
+    background-image: url("assets/ThreeofCups.jpg");
+}
+#FourofCups {
+    background-image: url("assets/FourofCups.jpg");
+}
+#FiveofCups {
+    background-image: url("assets/FiveofCups.jpg");
+}
+#SixofCups {
+    background-image: url("assets/SixofCups.jpg");
+}
+#SevenofCups {
+    background-image: url("assets/SevenofCups.jpg");
+}
+#EightofCups {
+    background-image: url("assets/EightofCups.jpg");
+}
+#NineofCups {
+    background-image: url("assets/NineofCups.jpg");
+}
+#TenofCups {
+    background-image: url("assets/TenofCups.jpg");
+}
+#PageofCups {
+    background-image: url("assets/PageofCups.jpg");
+}
+#KnightofCups {
+    background-image: url("assets/KnightofCups.jpg");
+}
+#QueenofCups {
+    background-image: url("assets/QueenofCups.jpg");
+}
+#KingofCups {
+    background-image: url("assets/KingofCups.jpg");
+}
+#AceofWands {
+    background-image: url("assets/AceofWands.jpg");
+}
+#TwoofWands {
+    background-image: url("assets/TwoofWands.jpg");
+}
+#ThreeofWands {
+    background-image: url("assets/ThreeofWands.jpg");
+}
+#FourofWands {
+    background-image: url("assets/FourofWands.jpg");
+}
+#FiveofWands {
+    background-image: url("assets/FiveofWands.jpg");
+}
+#SixofWands {
+    background-image: url("assets/SixofWands.jpg");
+}
+#SevenofWands {
+    background-image: url("assets/SevenofWands.jpg");
+}
+#EightofWands {
+    background-image: url("assets/EightofWands.jpg");
+}
+#NineofWands {
+    background-image: url("assets/NineofWands.jpg");
+}
+#TenofWands {
+    background-image: url("assets/TenofWands.jpg");
+}
+#PageofWands {
+    background-image: url("assets/PageofWands.jpg");
+}
+#KnightofWands {
+    background-image: url("assets/KnightofWands.jpg");
+}
+#QueenofWands {
+    background-image: url("assets/QueenofWands.jpg");
+}
+#KingofWands {
+    background-image: url("assets/KingofWands.jpg");
+}
+
